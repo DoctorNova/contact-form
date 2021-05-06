@@ -1,0 +1,3 @@
+{
+    "testMessage": "Hello lovely world. Today is {ts, date, ::yyyyMMdd}"
+}
