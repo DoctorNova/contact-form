@@ -2,18 +2,21 @@ import { Menu } from "antd";
 import { FormattedMessage } from "react-intl";
 import "./Header.scss";
 import logo from "./logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import LangSelect from "../i18n/LangSelect";
+import { Language } from "../i18n/I18nProvider";
 
 const PATHS_MENU_ITEMS: any = {
   "/": "1",
   "/contact": "2",
 };
 
-export default function Header() {
-  const activeMenuItem = PATHS_MENU_ITEMS[window.location.pathname];
+export default function Header({language, onLangChange }: {language: Language, onLangChange: (lang: Language) => void}) {
+  const location = useLocation();
+  const activeMenuItem = PATHS_MENU_ITEMS[location.pathname];
 
   return (
-    <>
+    <div className="header">
       <img src={logo} className="logo" alt="App logo" />
       <Menu
         theme="dark"
@@ -37,6 +40,9 @@ export default function Header() {
           </Link>
         </Menu.Item>
       </Menu>
-    </>
+      <div className="lang">
+        <LangSelect language={language} onChange={onLangChange} />
+      </div>
+    </div>
   );
 }

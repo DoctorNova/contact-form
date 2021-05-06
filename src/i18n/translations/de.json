@@ -1,3 +1,6 @@
 {
-    "testMessage": "Hallöchen liebe Welt. Heute ist der {ts, date, ::yyyyMMdd}"
+    "contact": "Kontakt",
+    "home": "Startseite",
+    "de": "Deutsch",
+    "en": "Englisch"
 }

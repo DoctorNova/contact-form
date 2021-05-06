@@ -7,7 +7,12 @@ module.exports = {
       options: {
           customizeTheme: {
               "@primary-color": "#F18815",
+              "@icon-color": "#EDEDED",
+              "@text-color": "#EDEDED",
+              "@text-color-secondary": "#EDEDED",
               "@text-color-inverse": "#1E1E1E",
+              "@item-hover-bg": "#F18815",
+              "@select-item-selected-color": "#1E1E1E",
               "@menu-dark-highlight-color": "#1E1E1E",
               "@menu-dark-selected-item-text-color": "#1E1E1E",
               "@body-background": "#252526",
