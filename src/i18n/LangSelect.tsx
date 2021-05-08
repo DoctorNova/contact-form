@@ -1,8 +1,8 @@
 import { Select } from "antd";
 import "./LangSelect.scss";
-import React, { useState } from "react";
+import React from "react";
 import "antd/dist/antd.less";
-import { getBrowserLang, Language, LANGUAGES } from "./I18nProvider";
+import { Language, LANGUAGES } from "./I18nProvider";
 
 export default function LangSelect({
   language,
@@ -13,7 +13,7 @@ export default function LangSelect({
 }) {
   return (
     <Select
-      style={{ width: 150 }}
+      style={{ width: 130 }}
       bordered={false}
       defaultValue={language.code}
       onChange={(value) => {
