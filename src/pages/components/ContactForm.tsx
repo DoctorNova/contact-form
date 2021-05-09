@@ -253,7 +253,7 @@ const ContactForm = ({ onFinish, onError }: ContactFormProps) => {
               ),
             },
             {
-              pattern: /(\d){1,3}\.(\d){1,3}\.(\d){1,3}/,
+              pattern: /^(\d){1,3}\.(\d){1,3}\.(\d){1,3}$/g,
               message: (
                 <FormattedMessage
                   id="versionNumberInvalid"
