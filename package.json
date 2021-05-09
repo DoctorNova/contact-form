@@ -28,6 +28,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "extract": "formatjs extract",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@formatjs/cli": "^4.2.11",
     "@formatjs/ts-transformer": "^3.3.11",
     "@types/react-router-dom": "^5.1.7",
     "babel-plugin-formatjs": "^10.2.11"
