@@ -22,6 +22,7 @@
     "phoneNumber": "Phone",
     "phoneNumberRequired": "Please provide a phone number",
     "phoneNumberInvalid": "Please provide a valid phone number",
+    "phoneNumberPrefix": "Please provide the prefix of your country",
     "description": "Description",
     "descriptionRequired": "Please provide a description",
     "submit": "Submit",

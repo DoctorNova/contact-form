@@ -22,6 +22,7 @@
     "phoneNumber": "Telefonnummer",
     "phoneNumberRequired": "Bitte geben Sie eine Telefonnummer an",
     "phoneNumberInvalid": "Bitte geben Sie eine korrekte Telefonnummer an",
+    "phoneNumberPrefix": "Bitte geben Sie die Vorwahl ihres Landes an",
     "description": "Beschreibung",
     "descriptionRequired": "Bitte geben Sie eine Beschreibung an",
     "submit": "Absenden",

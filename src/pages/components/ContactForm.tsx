@@ -81,7 +81,10 @@ const ContactForm = ({ onFinish, onError }: ContactFormProps) => {
       .finally(() => setIsLoading(false));
     */
 
-    setTimeout(() => { setIsLoading(false); onFinish(); }, 5000);
+    setTimeout(() => {
+      setIsLoading(false);
+      onFinish();
+    }, 5000);
   };
 
   return (
@@ -194,7 +197,21 @@ const ContactForm = ({ onFinish, onError }: ContactFormProps) => {
         >
           <Input
             addonBefore={
-              <Form.Item name="phonePrefix" noStyle>
+              <Form.Item
+                name="phonePrefix"
+                noStyle
+                rules={[
+                  {
+                    required: true,
+                    message: (
+                      <FormattedMessage
+                        id="phoneNumberPrefix"
+                        defaultMessage="Please provide the prefix of your country"
+                      />
+                    ),
+                  },
+                ]}
+              >
                 <Select
                   showSearch
                   style={{ width: 80 }}
