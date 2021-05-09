@@ -38,14 +38,24 @@ export const LANGUAGES: Language[] = [
 
 const getBrowserLangCode = () => {
     const browserLocale = Array.isArray(navigator.language) ? navigator.language[0] : defaultLocale;
+    // For now only use the prefix. For example it only returns "en" from "en_US".
     return browserLocale.split(/-|_/)[0];
 }
 
+/**
+ * Return the Language object for the browser language.
+ * @returns Language
+ */
 export const getBrowserLang: () => Language = () => {
     const lang = getBrowserLangCode();
     return LANGUAGES.find(l => l.code === lang) ?? LANGUAGES[0];
 };
 
+/**
+ * Inside of this component you can use the translated labels.
+ * @param props 
+ * @returns 
+ */
 export default function I18nProvider( props: {children: React.ReactNode, locale?: Language} ) {
     const locale = props.locale ?? getBrowserLangCode();
     const translation = LANGUAGES.find(lang => lang.code === locale.code) ?? LANGUAGES[0];

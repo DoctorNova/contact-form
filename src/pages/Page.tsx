@@ -5,10 +5,10 @@ interface Props {
     children: React.ReactNode
 }
 
-const Page = ({ children } : Props) => (
+const Page = ({ children }: Props) => (
     <div className="page-wrapper">
         <div className="page-content">
-            { children }
+            {children}
         </div>
     </div>
 );

@@ -1,10 +1,10 @@
-import { Button, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import { MessageFilled } from "@ant-design/icons";
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import Page from "./Page";
 import "./StartPage.scss";
-import { Link } from "react-router-dom";
+import LinkButton from "./components/LinkButton";
 
 export default function Startpage() {
   return (
@@ -23,16 +23,12 @@ export default function Startpage() {
       <Row>
         <Col span={24}>
           <div className="startpage-row">
-            <Link to="/contact">
-              <Button type="primary" icon={<MessageFilled />} size="large">
-                <span>
-                  <FormattedMessage
-                    id="getInTouch"
-                    defaultMessage="Contact us"
-                  ></FormattedMessage>
-                </span>
-              </Button>
-            </Link>
+            <LinkButton to="/contact" type="primary" icon={<MessageFilled />} size="large">
+              <FormattedMessage
+                id="getInTouch"
+                defaultMessage="Contact us"
+              ></FormattedMessage>
+            </LinkButton>
           </div>
         </Col>
       </Row>
